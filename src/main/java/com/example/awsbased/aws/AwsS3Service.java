@@ -47,7 +47,8 @@ public class AwsS3Service {
             log.debug("Stack trace", e);
             uploadFile = getFailedUploadDto(fileName, e.getMessage());
         } finally {
-            fileUtils.deleteFile(tmpFilePath);
+            boolean isDeleted = fileUtils.deleteFile(tmpFilePath);
+            log.info("Tmp file {} is deleted with flag {}", tmpFilePath, isDeleted);
         }
         return uploadFile;
     }

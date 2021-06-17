@@ -30,13 +30,14 @@ public class FileUtils {
         return result;
     }
 
-    public void deleteFile(Path filePath) {
+    public boolean deleteFile(Path filePath) {
+        var isDeleted = false;
         try {
-            boolean isDeleted = Files.deleteIfExists(filePath);
-            log.info("File on path {} is deleted with flag {}", filePath, isDeleted);
+            isDeleted = Files.deleteIfExists(filePath);
         } catch (IOException e) {
             log.info("Can't delete file on path {} with message {}", filePath, e.getMessage());
             log.debug("Stack trace", e);
         }
+        return isDeleted;
     }
 }
