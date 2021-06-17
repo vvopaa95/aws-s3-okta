@@ -19,6 +19,7 @@
         <aws.sdk.version>1.11.1034</aws.sdk.version>
         <spock.version>2.0-groovy-3.0</spock.version>
         <wiremock.version>2.28.0</wiremock.version>
+        <gmavenplus.version>1.12.1</gmavenplus.version>
     </properties>
     <dependencies>
         <!-- Spring -->
@@ -120,6 +121,18 @@
                         </exclude>
                     </excludes>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.gmavenplus</groupId>
+                <artifactId>gmavenplus-plugin</artifactId>
+                <version>${gmavenplus.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compileTests</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
