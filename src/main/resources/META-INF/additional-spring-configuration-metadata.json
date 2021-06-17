@@ -1,0 +1,43 @@
+{
+  "properties": [
+    {
+      "name": "cloud.aws.access-key",
+      "type": "java.lang.String",
+      "description": "Aws access key for aws console."
+    },
+    {
+      "name": "cloud.aws.secret-key",
+      "type": "java.lang.String",
+      "description": "Aws secret key for aws console."
+    },
+    {
+      "name": "cloud.aws.region",
+      "type": "java.lang.String",
+      "description": "Region to work with in aws console."
+    },
+    {
+      "name": "cloud.aws.bucket-name",
+      "type": "java.lang.String",
+      "description": "Default bucket name for application usage."
+    },
+    {
+      "name": "cloud.aws.executor-threads",
+      "type": "java.lang.Integer",
+      "description": "Number of threads for Aws executor service."
+    },
+    {
+      "name": "home.file.prefix",
+      "type": "java.lang.String",
+      "description": "Temporary file prefix constant."
+    },
+    {
+      "name": "home.file.suffix",
+      "type": "java.lang.String",
+      "description": "Temporary file suffix constant."
+    },
+    {
+      "name": "cloud.aws.bucket-auto-creation",
+      "type": "java.lang.Boolean",
+      "description": "Whether a bucket should be created on application start-up."
+    }
+  ] }

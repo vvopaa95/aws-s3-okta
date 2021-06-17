@@ -1,0 +1,33 @@
+okta:
+  oauth2:
+    issuer: ${ORG_URL}
+    client-id: ${CLIENT_ID}
+    client-secret: ${CLIENT_SECRET}
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+  h2:
+    console:
+      enabled: true
+
+cloud:
+  aws:
+    access-key: ${AWS_ACCESS_KEY}
+    secret-key: ${AWS_SECRET_KEY}
+    region: EU_CENTRAL_1
+    bucket-name: vvopaa-7fce2432-a775-44e5-ab3e-15788e47b525
+    bucket-auto-creation: true
+
+home:
+  file:
+    prefix: prefix-1
+    suffix: suffix-1

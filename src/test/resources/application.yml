@@ -1,0 +1,33 @@
+okta:
+  oauth2:
+    issuer: https://localhost:${wiremock.https.port}/oauth2/default
+    client-id: TEST_CLIENT_ID
+    client-secret: TEST_CLIENT_SECRET
+  client:
+    token: FAKE_TEST_TOKEN
+    org-url: https://localhost:${wiremock.https.port}
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+
+cloud:
+  aws:
+    access-key: aws-test-access-key
+    secret-key: aws-test-secret-key
+    region: EU_CENTRAL_1
+    bucket-name: test-bucket-name
+    bucket-auto-creation: false
+
+home:
+  file:
+    prefix: prefix-1
+    suffix: suffix-1
